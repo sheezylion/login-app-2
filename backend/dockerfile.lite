@@ -17,9 +17,9 @@ FROM gcr.io/distroless/base-debian11 AS build-release-stage
 
 WORKDIR /
 
-COPY --from=build-stage /main /main
+# COPY --from=build-stage /main /main
 
-COPY --from=build-stage /.env /.env
+COPY --from=build-stage /app/.env /.env
 
 EXPOSE 4000
 
